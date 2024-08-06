@@ -1,13 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-
-const links = (component) => {
-  if (component === 'Rarr') {
-    window.location.href = '/rarr';
-  } else if (component === 'Arr') {
-    window.location.href = '/arr';
-  }
-};
 
 const Rarr = () => {
   return (
@@ -32,20 +25,25 @@ const Arr = () => {
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <div>
-        <Arr />
-        <Rarr />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/arr">Array</Link>
+            </li>
+            <li>
+              <Link to="/rarr">Refresh Array</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/rarr" element={<Rarr />} />
+          <Route path="/arr" element={<Arr />} />
+        </Routes>
       </div>
-      <button onClick={() => links('Arr')}>
-        Array
-      </button>
-      <br />
-      <br />
-      <button onClick={() => links('Rarr')}>
-        Refresh Array
-      </button>
-    </div>
+    </Router>
   );
 };
 
