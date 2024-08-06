@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
- const DCE2=()=>{
+ const D2CE2=()=>{
   const a1={
     color:'green'
   }
@@ -26,4 +26,4 @@ import './App.css';
     </div>
   )
  }
-export default DCE2;
+export default D2CE2;
