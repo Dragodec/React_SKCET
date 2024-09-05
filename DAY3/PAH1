@@ -1,0 +1,29 @@
+import React,{useState} from 'react';
+function SL(){
+    const[isVisible,setIsVisible]=useState(false);
+    const[clickCount,setClickCount]=useState(0);
+    const handleClick=()=>{
+        setClickCount(prevCount=>prevCount+1);
+        if(clickCount+1===4){
+            setIsVisible(prevIsVisible=>!prevIsVisible);
+            setClickCount(0);
+        }
+    };
+    return(
+        <div>
+            <h1>Solo Leveling</h1>
+            <h3>click once to command your shadow soliders!</h3>
+            <button onClick={handleClick}>
+                {isVisible ? 'Sung Jinwoo' : 'Monarch of Shadows'}  MODE
+            </button>
+            {isVisible && (
+                <div>
+                    <h1>Shadow Monarch has awakened</h1>
+                    <h3>click tetra times to eliminate extraction</h3>
+                </div>
+
+            )}
+        </div>
+    );
+}
+export default SL;
