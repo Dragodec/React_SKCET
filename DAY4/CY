@@ -1,0 +1,50 @@
+import React from 'react';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
+
+const books = [
+  {
+    title: '1984',
+    summary: 'Dystopian novel by George Orwell, exploring the consequences of totalitarianism and mass surveillance.'
+  },
+  {
+    title: 'Pride and Prejudice',
+    summary: 'Classic novel by Jane Austen, focusing on themes of love, social class, and personal growth in 19th-century England.'
+  },
+  {
+    title: 'The Catcher in the Rye',
+    summary: 'Novel by J.D. Salinger, following the experiences and thoughts of a disenchanted teenage boy named Holden Caulfield.'
+  },
+  {
+    title: 'The Great Gatsby',
+    summary: 'Novel by F. Scott Fitzgerald, depicting the extravagance and moral decay of the Jazz Age through the story of Jay Gatsby.'
+  },
+  {
+    title: 'Moby-Dick',
+    summary: 'Epic novel by Herman Melville, recounting the obsessive quest of Captain Ahab to seek revenge on the white whale, Moby Dick.'
+  }
+];
+
+const BookList = () => {
+  return (
+   <div> <h1>Most Influential Books of All Time</h1>
+    <List>
+      {books.map((book, index) => (
+        <React.Fragment key={index}>
+          <ListItem>
+            <ListItemText
+              primary={book.title}
+              secondary={book.summary}
+            />
+          </ListItem>
+          {index < books.length - 1 && <Divider />}
+        </React.Fragment>
+      ))}
+    </List>
+    </div>
+  );
+};
+
+export default BookList;
