@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.landing-page {
+    text-align: center;
+    color: #333;
+    background: linear-gradient(145deg, #ff6ec4, #7873f5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 15px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: rgba(245, 77, 206, 0.2);
+}
+
+.hero {
+    padding: 100px 20px;
+    color: white;
+    margin-top:140px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #f551a0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #f551a0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .categories h2 {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .categories h2 {
+        font-size: 1.25rem;
+    }
+
+    .button {
+        padding: 6px 12px;
+    }
+}
+
+.about-us, .contact-us {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.about-us h2, .contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-us p, .contact-us p {
+    font-size: 16px;
+    line-height: 1.5;
+}

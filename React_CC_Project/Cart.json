@@ -1,0 +1,12 @@
+{
+  "cart": [
+    {
+      "id": "fa8e2223-39d2-44b1-841a-fc6e8d8a48ab",
+      "giftId": 2,
+      "name": "Custom T-Shirt",
+      "actualPrice": 25,
+      "offerPrice": 20,
+      "quantity": 2
+    }
+  ]
+}
